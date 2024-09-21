@@ -1,4 +1,4 @@
-package com.lycodeing.security.provider;
+package com.lycodeing.security.core;
 
 public interface AuthenticationProvider {
 

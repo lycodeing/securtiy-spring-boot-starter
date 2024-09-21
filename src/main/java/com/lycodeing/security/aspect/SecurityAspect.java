@@ -7,12 +7,10 @@ import com.lycodeing.security.exception.RoleDeniedException;
 import com.lycodeing.security.util.SecurityUtils;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
 @Aspect
-@Component
 public class SecurityAspect {
 
     @Before("@annotation(roleCheck)")

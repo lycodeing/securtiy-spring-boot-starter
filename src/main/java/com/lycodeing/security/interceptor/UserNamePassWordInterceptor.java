@@ -1,6 +1,6 @@
 package com.lycodeing.security.interceptor;
 
-import com.lycodeing.security.provider.Authentication;
+import com.lycodeing.security.core.Authentication;
 import com.lycodeing.security.token.UsernamePasswordAuthenticationToken;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

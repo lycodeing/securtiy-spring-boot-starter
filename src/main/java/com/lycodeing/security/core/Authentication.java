@@ -1,9 +1,9 @@
-package com.lycodeing.security.provider;
+package com.lycodeing.security.core;
 
-import com.lycodeing.security.entity.SecurityUser;
+import java.util.Collection;
 
-public interface Authentication extends SecurityUser {
-
+public interface Authentication  {
+    Collection<String> getAuthorities();
 
     Object getPrincipal();  // 获取主体（如用户名或用户详细信息）
 

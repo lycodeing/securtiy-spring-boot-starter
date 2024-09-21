@@ -1,18 +1,18 @@
 package com.lycodeing.security.manager;
 
+import com.lycodeing.security.core.Authentication;
+import com.lycodeing.security.core.AuthenticationProvider;
 import com.lycodeing.security.exception.AuthenticationException;
-import com.lycodeing.security.provider.Authentication;
-import com.lycodeing.security.provider.AuthenticationProvider;
-import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
-@Setter
+
 public class AuthenticationManager {
-    private List<AuthenticationProvider> authenticationProvider;
+    private final List<AuthenticationProvider> authenticationProvider = new ArrayList<>();
 
     public Authentication authenticate(Authentication authentication) {
-        for (AuthenticationProvider provider : authenticationProvider) {
+        for (AuthenticationProvider provider : this.authenticationProvider) {
             if (provider.supports(authentication.getClass())) {
                 return provider.authenticate(authentication);
             }
@@ -20,4 +20,8 @@ public class AuthenticationManager {
         throw new AuthenticationException("No AuthenticationProvider found for " + authentication.getClass().getName());
     }
 
+
+    public synchronized void addProvider(AuthenticationProvider provider) {
+        this.authenticationProvider.add(provider);
+    }
 }

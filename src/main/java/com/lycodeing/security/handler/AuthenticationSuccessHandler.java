@@ -1,6 +1,6 @@
 package com.lycodeing.security.handler;
 
-import com.lycodeing.security.provider.Authentication;
+import com.lycodeing.security.core.Authentication;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 

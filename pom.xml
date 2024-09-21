@@ -10,12 +10,10 @@
     </parent>
     <groupId>com.lycodeing</groupId>
     <artifactId>security-spring-boot-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>security-spring-boot-starter</name>
     <description>security-spring-boot-starter</description>
     <url/>
-
-
 
 
     <properties>
@@ -34,12 +32,6 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
-        <!-- JWT Token parsing (optional if using JWT tokens) -->
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.1</version>
-        </dependency>
 
         <!-- Lombok (optional for simplifying code) -->
         <dependency>
@@ -55,26 +47,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <!-- Maven Compiler Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>17</source> <!-- Assuming JDK 17 -->
-                    <target>17</target>
-                </configuration>
-            </plugin>
-
-            <!-- Spring Boot Maven Plugin -->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>

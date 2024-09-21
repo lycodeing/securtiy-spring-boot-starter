@@ -1,0 +1,2 @@
+com.lycodeing.security.config.SecurityConfig
+com.lycodeing.security.aspect.SecurityAspect
